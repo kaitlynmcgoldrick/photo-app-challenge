@@ -19,7 +19,7 @@ class Users extends Component {
     render() {
         return (
             this.state.users.map(user => {
-                return <User key={user.id} name={user.name}/>
+                return <User key={user.id} name={user.name} id={user.id}/>
             })
         );
     }

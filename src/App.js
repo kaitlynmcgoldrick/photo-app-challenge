@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Users from './pages/users';
+import Albums from './pages/albums';
 
 class App extends Component {
 
@@ -12,6 +13,8 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Users}/>
+          <Route path="/albums/:id" component={Albums}/>
+          {/* <Route path="/photos/:id" component={Photos}/> */}
         </Switch>
       </div>
     );
