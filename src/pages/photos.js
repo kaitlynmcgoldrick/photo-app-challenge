@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 
 import Photo from '../components/photo';
+import StyledTitle from '../styledComponents/styledTitle';
 
 class Photos extends Component {
     constructor() {
@@ -18,13 +19,19 @@ class Photos extends Component {
 
     render() {
         return (
-            this.state.photos.map(photo => {
+            <div>
+                <StyledTitle>
+                    <hi>{this.props.location.state.albumTitle}</hi>
+                </StyledTitle>
+                {this.state.photos.map(photo => {
                 return <Photo 
-                key={photo.id} 
-                photoTitle={photo.title} 
-                photoId={photo.id}
-                url={photo.thumbnailUrl}/>
-            })
+                    key={photo.id} 
+                    photoTitle={photo.title} 
+                    photoId={photo.id}
+                    url={photo.thumbnailUrl}/>
+                })}
+            </div>
+
         );
     }
 }

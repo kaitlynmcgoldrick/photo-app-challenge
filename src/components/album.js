@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom';
+import StyledList from '../styledComponents/styledList';
+import StyledLink from '../styledComponents/styledLink';
 
 class Album extends Component {
     render () {
         return (
-            <Link 
-                to={{
-                    pathname: `/photos/${this.props.albumId}`,
-                    state: { 
-                        albumId: this.props.albumId
-                    }
-                }}>{this.props.albumTitle}</Link>
+            <StyledList>
+                <StyledLink 
+                    to={{
+                        pathname: `/photos/${this.props.albumId}`,
+                        state: { 
+                            albumId: this.props.albumId,
+                            albumTitle: this.props.albumTitle
+                        }
+                    }}>{this.props.albumTitle}</StyledLink>
+            </StyledList>
         )
     }
 }

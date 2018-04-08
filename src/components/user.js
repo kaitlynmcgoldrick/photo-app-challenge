@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom';
+import StyledList from '../styledComponents/styledList';
+import StyledLink from '../styledComponents/styledLink';
 
 class User extends Component {
     render () {
         return (
-            <Link 
-                to={{
-                    pathname: `/albums/${this.props.id}`,
-                    state: { 
-                      id: this.props.id,
-                      name: this.props.name
-                    }
-                }}>{this.props.name}</Link>
+            <StyledList>
+                <StyledLink 
+                    to={{
+                        pathname: `/albums/${this.props.id}`,
+                        state: { 
+                        id: this.props.id,
+                        name: this.props.name
+                        }
+                    }}>{this.props.name}</StyledLink>
+            </StyledList>
         )
     }
 }

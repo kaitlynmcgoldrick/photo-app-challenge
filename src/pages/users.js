@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 
 import User from '../components/user';
+import StyledTitle from '../styledComponents/styledTitle';
 
 class Users extends Component {
     constructor() {
@@ -18,9 +19,14 @@ class Users extends Component {
 
     render() {
         return (
-            this.state.users.map(user => {
-                return <User key={user.id} name={user.name} id={user.id}/>
-            })
+            <div>
+                <StyledTitle>
+                    <hi>Friends</hi>
+                </StyledTitle>
+                {this.state.users.map(user => {
+                    return <User key={user.id} name={user.name} id={user.id}/>
+                })}
+            </div>
         );
     }
 }
