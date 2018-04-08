@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router';
 import logo from './logo.svg';
 import './App.css';
 
-import Users from './components/users';
+import Users from './pages/users';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      users: []
-    }
-  }
-
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(res => this.setState({ users: [...res] }))
-  }
 
   render() {
     return (
       <div className="App">
-        <Users users={this.state.users}/>
+        <Switch>
+          <Route exact path="/" component={Users}/>
+        </Switch>
       </div>
     );
   }
