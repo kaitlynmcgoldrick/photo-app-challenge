@@ -9,8 +9,7 @@ class Album extends Component {
                 to={{
                     pathname: `/photos/${this.props.albumId}`,
                     state: { 
-                      albumId: this.props.albumId,
-                      albumTitle: this.props.albumTitle
+                        albumId: this.props.albumId
                     }
                 }}>{this.props.albumTitle}</Link>
         )

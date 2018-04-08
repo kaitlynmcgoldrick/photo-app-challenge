@@ -19,7 +19,10 @@ class Albums extends Component {
     render() {
         return (
             this.state.albums.map(album => {
-                return <Album key={album.id} albumTitle={album.title} albumId={album.id}/>
+                return <Album 
+                    key={album.id} 
+                    albumTitle={album.title} 
+                    albumId={album.id}/>
             })
         );
     }

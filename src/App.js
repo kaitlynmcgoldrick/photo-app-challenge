@@ -5,6 +5,7 @@ import './App.css';
 
 import Users from './pages/users';
 import Albums from './pages/albums';
+import Photos from './pages/photos';
 
 class App extends Component {
 
@@ -14,7 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Users}/>
           <Route path="/albums/:id" component={Albums}/>
-          {/* <Route path="/photos/:id" component={Photos}/> */}
+          <Route path="/photos/:albumId" component={Photos}/>
         </Switch>
       </div>
     );
