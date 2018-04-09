@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, HashRouter } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 
 import { injectGlobal } from 'styled-components';
 
@@ -9,14 +8,13 @@ import Users from './pages/users';
 import Albums from './pages/albums';
 import Photos from './pages/photos';
 
-const history = createBrowserHistory();
 class App extends Component {
 
   render() {
     return (
       <div className="App">
         <Header/>
-        <HashRouter history={history}>
+        <HashRouter>
           <Switch>
             <Route exact path={process.env.PUBLIC_URL + '/'} component={Users}/>
             <Route path={process.env.PUBLIC_URL + '/albums/:id'} component={Albums}/>
