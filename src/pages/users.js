@@ -1,4 +1,5 @@
 import React, { Component }from 'react';
+import { Link } from 'react-router-dom';
 
 import User from '../components/user';
 import StyledTitle from '../styledComponents/styledTitle';
@@ -21,7 +22,11 @@ class Users extends Component {
         return (
             <div>
                 <StyledTitle>
-                    <p>Friends</p>
+                    <p>
+                        <Link to="/">
+                            <span role="img" aria-label="Professional-Woman">👩🏽‍💼 </span>Friends
+                        </Link>
+                    </p>
                 </StyledTitle>
                 {this.state.users.map(user => {
                     return <User key={user.id} name={user.name} id={user.id}/>

@@ -11,6 +11,8 @@ const StyledPhoto = styled.div`
         font-size: 15px;
         color: #000;
         padding: 10px;
+        height: 50px;
+
     }
 `;
 class Photo extends Component {
@@ -19,7 +21,9 @@ class Photo extends Component {
             <StyledPhoto>
                 <img src={this.props.url} alt={this.props.photoTitle}/>
                 <div>
-                    <p>{this.props.photoTitle}</p>
+                    {this.props.photoTitle.length > 17 ? 
+                    <p>{this.props.photoTitle.slice(0,17)}...</p> :
+                    <p>{this.props.photoTitle}</p>}
                 </div>
             </StyledPhoto>
 

@@ -31,8 +31,17 @@ class Albums extends Component {
         return (
             <div>
                 <StyledTitle>
-                    <p><Link to="/">Friends ></Link></p>
-                    {this.state.name && <p className="primary"> {this.state.name} Albums</p>}
+                    <p>
+                        <Link to="/">
+                            <span role="img" aria-label="Professional-Woman">👩🏽‍💼 </span>
+                            Friends →
+                        </Link>
+                    </p>
+                    {this.state.name && 
+                    <p className="primary"> 
+                        <span role="img" aria-label="Camera"> 📸 </span>
+                        {this.state.name} Albums
+                    </p>}
                 </StyledTitle>
                 {this.state.albums.map(album => {
                 return <Album 

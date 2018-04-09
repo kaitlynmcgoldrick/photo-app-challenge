@@ -36,9 +36,24 @@ class Photos extends Component {
         return (
             <div>
                 <StyledTitle>
-                    <p><Link to="/">Friends ></Link></p>
-                    {this.state.name && <p><Link to={"/albums/"+this.props.match.params.id}> {this.state.name} Albums ></Link></p>}
-                    {this.state.albumName && <p className="primary"> {this.state.albumName}</p>}
+                    <p>
+                        <Link to="/">
+                            <span role="img" aria-label="Professional-Woman">👩🏽‍💼 </span>
+                            Friends →
+                        </Link>
+                    </p>
+                    {this.state.name && 
+                    <p>
+                        <Link to={"/albums/"+this.props.match.params.id}> 
+                            <span role="img" aria-label="Camera"> 📸 </span>
+                            {this.state.name} Albums →
+                        </Link>
+                    </p>}
+                    {this.state.albumName && 
+                    <p className="primary"> 
+                        <span role="img" aria-label="Picture"> 🖼 </span>
+                        {this.state.albumName}
+                    </p>}
                 </StyledTitle>
                 {this.state.photos.map(photo => {
                 return <Photo 
