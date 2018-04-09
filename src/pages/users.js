@@ -21,7 +21,7 @@ class Users extends Component {
         return (
             <div>
                 <StyledTitle>
-                    <hi>Friends</hi>
+                    <p>Friends</p>
                 </StyledTitle>
                 {this.state.users.map(user => {
                     return <User key={user.id} name={user.name} id={user.id}/>

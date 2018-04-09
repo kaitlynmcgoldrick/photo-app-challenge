@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
-  background: #426fb3;
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+  background: #124186;
   height: 4em;
   line-height: 4em;
   
   a {
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Lobster', cursive;
     color: #fff;
     padding: 0px 20px;
     font-weight: bold;
     font-size: 30px;
+    text-transform: capitalize; #426fb3 
   }
 `;
 

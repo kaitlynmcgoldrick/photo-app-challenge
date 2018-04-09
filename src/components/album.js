@@ -9,8 +9,9 @@ class Album extends Component {
             <StyledList>
                 <StyledLink 
                     to={{
-                        pathname: `/photos/${this.props.albumId}`,
+                        pathname: `/photos/${this.props.id}/${this.props.albumId}`,
                         state: { 
+                            id: this.props.id,
                             albumId: this.props.albumId,
                             albumTitle: this.props.albumTitle
                         }
