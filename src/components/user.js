@@ -11,7 +11,6 @@ class User extends Component {
                     to={{
                         pathname: `/albums/${this.props.id}`,
                         state: { 
-                            id: this.key,
                             name: this.props.name
                         }
                     }}>{this.props.name}</StyledLink>

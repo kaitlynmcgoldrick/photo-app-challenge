@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Router } from 'react-router';
-import logo from './logo.svg';
 import { createBrowserHistory } from 'history';
 
 import { injectGlobal } from 'styled-components';
@@ -32,6 +31,8 @@ class App extends Component {
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Cantarell:400,700');
   body {
+    padding: 0;
+    margin: 0;
     text-align: center;
     background-color: ghostwhite;
     text-transform: uppercase;

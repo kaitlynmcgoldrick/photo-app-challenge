@@ -49,7 +49,7 @@ class Photos extends Component {
                             {this.state.name} Albums →
                         </Link>
                     </p>}
-                    {this.state.albumName && 
+                    {this.state.albumName && this.state.name &&
                     <p className="primary"> 
                         <span role="img" aria-label="Picture"> 🖼 </span>
                         {this.state.albumName}
