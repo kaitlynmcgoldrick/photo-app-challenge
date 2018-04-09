@@ -18,9 +18,9 @@ class App extends Component {
         <Header/>
         <HashRouter history={history}>
           <Switch>
-            <Route exact path="/" component={Users}/>
-            <Route path="/albums/:id" component={Albums}/>
-            <Route path="/photos/:id/:albumId" component={Photos}/>
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={Users}/>
+            <Route path={process.env.PUBLIC_URL + '/albums/:id'} component={Albums}/>
+            <Route path={process.env.PUBLIC_URL + '/photos/:id/:albumId'} component={Photos}/>
           </Switch>
         </HashRouter>
       </div>
