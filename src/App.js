@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Router } from 'react-router';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import { injectGlobal } from 'styled-components';
@@ -16,13 +16,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Router history={history}>
+        <HashRouter history={history}>
           <Switch>
             <Route exact path="/" component={Users}/>
             <Route path="/albums/:id" component={Albums}/>
             <Route path="/photos/:id/:albumId" component={Photos}/>
           </Switch>
-        </Router>
+        </HashRouter>
       </div>
     );
   }
